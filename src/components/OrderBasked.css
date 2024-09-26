@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(4, 4, 17);
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.menu-container {
+    width: 70%; 
+    height: 380px; 
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    background-color: rgb(146, 144, 26);
+    font-size: 25px;
+    cursor: pointer;
+ 
+}
+.menu-container li {
+    margin-bottom: 20px;
+    padding: 10px; 
+    background-color: #188621; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    width: 50%;
+    margin-left: 50px;
+    color: white
+}
+.menu-container li:hover {
+    background-color: #112c12;
+}
+
+.basked-container {
+    width: 30%; 
+    padding: 10px;
+    background-color: rgb(163, 222, 230);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 380px;
+    font-size: 25px;
+    
+}
+
+
+.total-amount {
+    margin-top: auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: right; 
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
+}
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.purchase-button {
+    display: block; 
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+
+.purchase-button:hover {
+    background-color: #038b08; 
+}
+
+
+
+
+@media (max-width: 768px) {
+    .order-container {
+        flex-direction: column;
+    }
+
+    .menu-container, .basked-container {
+        width: 100%; 
+    }
+
+    .menu-container {
+        border-right: none; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .order-container {
+        padding: 5px;
+    }
+
+    .menu-container, .basked-container {
+        padding: 5px;
+    }
+}
